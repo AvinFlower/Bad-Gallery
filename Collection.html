@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link rel="stylesheet" href="Collection.css">
+</head>
+<body>
+<div class="fixed-header">
+    <button class="button" onclick="goToPage('MAIN_PAGE.html')"></button>
+    <h1>Bad Gallery</h1>
+</div>
+
+<!-- Модальное окно -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="left-arrow-zone" onclick="plusSlides(-1)"></div>
+        <div class="right-arrow-zone" onclick="plusSlides(1)"></div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="image-wrapper">
+            <img id="img01">
+        </div>
+        <div class="text-container" id="imageTitle"> </div>
+        <div class="button-container-modal">
+            <button class="button-modal" onclick="downloadImage()">Download</button>
+        </div>
+    </div>
+</div>
+
+<input type="text" id="searchInput" placeholder="Search images by title...">
+<div class="filter-label">Filters</div>
+<div class="filter-controls">
+    <div class="filter-column">
+        <button class="filter-button" onclick="filterByColor(', nature')">Nature</button>
+        <button class="filter-button" onclick="filterByColor(', fiction')">Fiction</button>
+    </div>
+    <div class="filter-column">
+        <button class="filter-button" onclick="filterByColor(', min')">Minimalism</button>
+        <button class="filter-button" onclick="filterByColor(', other')">Other</button>
+    </div>
+    <button class="button_reset" onclick="resetFilters()">Reset Filters</button>
+</div>
+
+<div class="image-container" id="imageContainer"></div>
+
+
+<script src="Collection.js"></script>
+</body>
+</html>

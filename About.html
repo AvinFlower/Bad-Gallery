@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #051334, #050523);
+            font-family: "Courier New", Courier, monospace;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 900px; /* Установите максимальную ширину */
+            margin: 0 auto; /* Автоматическое выравнивание по центру */
+            padding: 0 20px; /* Добавление отступов слева и справа */
+            min-height: 100vh;
+        }
+        .main_text{
+            color: #a5aebd;
+            font-size: 20px;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+        .main_heading{
+            color: white;
+            font-size: 30px;
+            font-weight: 10;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        .main_heading:first-child {
+            margin-bottom: -40px; /* Отрицательный отступ для первого заголовка */
+            margin-top: -40px;
+        }
+
+
+        .button-container {
+            position: fixed; /* Поменяйте position на absolute */
+            bottom: 30px; /* Выставите желаемый вертикальный отступ от нижнего края */
+            left: 49%; /* Поместите контейнер кнопок по центру горизонтально */
+            transform: translateX(-50%); /* Центрируйте контейнер кнопок относительно центра страницы */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .button {
+            background-color: #1e0d1e; /* Цвет первой кнопки */
+            color: white;
+            width: 15%;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .button::before {
+            content: "\2190"; /* Unicode символ для стрелки влево */
+            margin-right: 3px; /* Добавление небольшого пространства между стрелкой и текстом */
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="main_heading">
+        <h1>About</h1>
+    </div>
+    <div class="main_text" id="first_text">
+        Welcome to BadGallery, where we explore the world of photography through a unique lens. At BadGallery, we curate a collection of captivating images that challenge conventional perspectives and ignite thought-provoking conversations.
+    </div>
+    <div class="main_heading">
+        Our Mission
+    </div>
+    <div class="main_text">
+        At BadGallery, we aim to redefine the boundaries of visual expression by showcasing compelling photographs that push the limits of creativity. Our mission is to provide a platform for photographers to share their work freely, regardless of traditional copyright constraints.
+    </div>
+    <div class="main_heading">
+        What Sets Us Apart
+    </div>
+    <div class="main_text">
+        Unlike traditional galleries, BadGallery operates on the principle of openness and accessibility. We believe that art should be enjoyed by all, without the barriers often imposed by copyright regulations. As such, we proudly host a diverse range of photographs that may not adhere to standard copyright practices.
+    </div>
+    <div class="main_heading">
+        Copyright Disclaimer
+    </div>
+    <div class="main_text">
+        While we strive to respect intellectual property rights, the nature of our platform means that some images may not have clear copyright attributions. We encourage photographers to submit their work with an understanding of our commitment to promoting artistic freedom.
+    </div>
+    <div class="button-container">
+        <button class="button" onclick="goToPage('MAIN_PAGE.html')">Back</button>
+    </div>
+</div>
+</body>
+<script>
+    function goToPage(url) {
+        window.location.href = url;
+    }
+</script>
+</html>
